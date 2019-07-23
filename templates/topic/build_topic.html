@@ -1,0 +1,14 @@
+{% extends "root_index.html" %}
+
+{% block content %}
+
+<p>Build Topic block</p>
+
+
+<form class="topic_form" action="{% url 'firstapp:create_topic' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="poor" />
+</form>
+
+{% endblock %}
